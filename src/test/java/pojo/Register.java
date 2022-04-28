@@ -1,19 +1,22 @@
 package pojo;
 
 public class Register {
-    private Integer id;
-    private String token;
+    private String email;
+    private String password;
 
-    public Register(Integer id, String token) {
-        this.id = id;
-        this.token = token;
+    public Register(){
+        super();
+    }
+    public Register(String email, String password) {
+        this.email = email;
+        this.password = password;
     }
 
-    public Integer getId() {
-        return id;
+    public String getEmail() {
+        return email;
     }
 
-    public String getToken() {
-        return token;
+    public String getPassword() {
+        return password;
     }
 }
