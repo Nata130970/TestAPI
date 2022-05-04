@@ -113,6 +113,4 @@ public class ApiRequestTest {
        .delete("api/users/2")
        .then().log().all();
     }
-
-
 }
