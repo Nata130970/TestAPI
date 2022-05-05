@@ -24,4 +24,8 @@ public class Specifications {
         RestAssured.requestSpecification=request;
         RestAssured.responseSpecification=response;
     }
+    public static void installCode (ResponseSpecification response){
+        RestAssured.responseSpecification=response;
+    }
+
 }
