@@ -67,10 +67,10 @@ public class RequestTest {
     }
     @Test
     public void getUserTest() {
-        String token = "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzMDcwZDI1ZS02MWI0LTRiZGUtOTU3Zi02ZjRmMDMwZDY4OTkifQ.eyJqdGkiOiI1YjI2NDAyOC05ZWFkLTQ1NDktOTMxMS0zNTRlZTM1OTAwNWMiLCJleHAiOjAsIm5iZiI6MCwiaWF0IjoxNjUyMjcwNjg5LCJpc3MiOiJodHRwOi8vYXV0aC5hc3VkZC5zaS5ieS9hdXRoL3JlYWxtcy9hc3VkZCIsImF1ZCI6Imh0dHA6Ly9hdXRoLmFzdWRkLnNpLmJ5L2F1dGgvcmVhbG1zL2FzdWRkIiwidHlwIjoiUmVnaXN0cmF0aW9uQWNjZXNzVG9rZW4iLCJyZWdpc3RyYXRpb25fYXV0aCI6ImF1dGhlbnRpY2F0ZWQifQ.PFYXhwAWHA5fJlJSJ-rTDZ6i91mLvatSDHQe0SfxF60";
+        String tokenAccess = "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzMDcwZDI1ZS02MWI0LTRiZGUtOTU3Zi02ZjRmMDMwZDY4OTkifQ.eyJqdGkiOiI1YjI2NDAyOC05ZWFkLTQ1NDktOTMxMS0zNTRlZTM1OTAwNWMiLCJleHAiOjAsIm5iZiI6MCwiaWF0IjoxNjUyMjcwNjg5LCJpc3MiOiJodHRwOi8vYXV0aC5hc3VkZC5zaS5ieS9hdXRoL3JlYWxtcy9hc3VkZCIsImF1ZCI6Imh0dHA6Ly9hdXRoLmFzdWRkLnNpLmJ5L2F1dGgvcmVhbG1zL2FzdWRkIiwidHlwIjoiUmVnaXN0cmF0aW9uQWNjZXNzVG9rZW4iLCJyZWdpc3RyYXRpb25fYXV0aCI6ImF1dGhlbnRpY2F0ZWQifQ.PFYXhwAWHA5fJlJSJ-rTDZ6i91mLvatSDHQe0SfxF60";
         RestAssured.baseURI = URL;
         given()
-                .header("Authorization", "Bearer " + token)
+                .header("Authorization", "Bearer " + tokenAccess)
                 .when()
                 .get("Cities/GetAll")
                 .then()
